@@ -11,7 +11,7 @@ export default function SupportSection() {
 
                 <div className="relative flex flex-col lg:flex-row">
 
-                    {/* ── Photo — left, flush, no border, no shadow, no caption ── */}
+                    {/* Photo - left, flush, no border, no shadow, no caption */}
                     <div className="relative w-full lg:w-80 xl:w-96 min-h-[320px] lg:min-h-full flex-shrink-0">
                         <Image
                             src="/story.png"
@@ -23,7 +23,7 @@ export default function SupportSection() {
                         />
                     </div>
 
-                    {/* ── Text side — right ── */}
+                    {/* Text side - right */}
                     <div className="flex-1 p-8 sm:p-12">
                         {/* Badge */}
                         <div className="inline-flex items-center gap-2 bg-[#00ab6b]/10 border border-[#00ab6b]/40 rounded-full px-3 py-1 mb-6">
@@ -45,7 +45,7 @@ export default function SupportSection() {
                             </p>
                             <p>
                                 You can also support by purchasing nominally priced exclusive audio, video, and graphic elements
-                                from my BuyMeACoffee shop — created specifically for supporters who want fresh and exclusive content.
+                                from my BuyMeACoffee shop, created specifically for supporters who want fresh and exclusive content.
                             </p>
                             <p className="text-white font-medium">
                                 I truly appreciate your support and many thanks for helping me continue sharing

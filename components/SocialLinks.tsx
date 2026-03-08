@@ -27,7 +27,7 @@ export default function EmailSection() {
 
                 <h2 className="text-2xl font-bold text-white mb-2">Get New Drops via Email</h2>
                 <p className="text-sm text-gray-400 mb-7 max-w-sm mx-auto leading-relaxed">
-                    Put your email below and receive fresh audio drops straight to your inbox — absolutely free.
+                    Put your email below and receive fresh audio drops straight to your inbox, absolutely free.
                 </p>
 
                 {submitted ? (

@@ -54,7 +54,7 @@ export default function ProfileHero() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative flex flex-col sm:flex-row sm:items-end gap-4 pb-5 -mt-14 sm:-mt-16">
 
-                        {/* Avatar — overlaps cover */}
+                        {/* Avatar - overlaps cover */}
                         <div className="relative flex-shrink-0 self-start">
                             <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-[#191c26] shadow-2xl shadow-black/50">
                                 <Image
@@ -87,7 +87,7 @@ export default function ProfileHero() {
                             </div>
                         </div>
 
-                        {/* Stats + Follow — right side */}
+                        {/* Stats + Follow - right side */}
                         <div className="flex items-center gap-3 sm:pb-1 flex-shrink-0">
                             {/* Quick stats */}
                             <div className="hidden md:flex items-center gap-4 mr-2">
@@ -205,7 +205,7 @@ export default function ProfileHero() {
                                         Get new audio drops<br />every week 🎧
                                     </h3>
                                     <p className="text-gray-400 text-sm leading-relaxed">
-                                        Enter your email address, become a follower and get fresh audio drops straight to your inbox — absolutely free.
+                                        Enter your email address, become a follower and get fresh audio drops straight to your inbox, absolutely free.
                                     </p>
                                 </div>
 

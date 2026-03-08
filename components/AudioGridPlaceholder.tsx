@@ -36,6 +36,9 @@ function AudioCard({ track, activeId, onPlay }: { track: Track; activeId: string
             audio.play().catch(() => { })
         } else {
             audio.pause()
+            audio.currentTime = 0
+            setProgress(0)
+            setCurrentTime('0:00')
         }
     }, [isPlaying])
 

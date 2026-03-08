@@ -4,14 +4,14 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-    title: 'Roxanne — Free Audio & Media Library',
+    title: 'Roxanne - Free Audio & Media Library',
     description: 'High quality music, sound effects and media resources shared freely for creators.',
     keywords: 'free audio, music library, sound effects, media resources, royalty free',
     icons: {
         icon: '/favicon.png',
     },
     openGraph: {
-        title: 'Roxanne — Free Audio & Media Library',
+        title: 'Roxanne - Free Audio & Media Library',
         description: 'High quality music, sound effects and media resources shared freely for creators.',
         type: 'website',
     },

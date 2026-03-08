@@ -39,7 +39,7 @@ function NavbarContent() {
                         <Image src="/logo.svg" alt="Roxanne" width={120} height={36} className="h-9 w-auto group-hover:opacity-80 transition-opacity" />
                     </Link>
 
-                    {/* Search bar — center */}
+                    {/* Search bar - center */}
                     <div className="hidden md:flex flex-1 max-w-sm mx-auto">
                         <div className="relative w-full">
                             <Search size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />

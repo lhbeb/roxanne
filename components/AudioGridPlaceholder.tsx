@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { Suspense, useState, useRef, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { Play, Pause, Clock, Download, Loader2 } from 'lucide-react'
 import { supabase, Track } from '@/lib/supabase'
@@ -175,7 +175,7 @@ function AudioCard({ track, activeId, onPlay }: { track: Track; activeId: string
     )
 }
 
-export default function AudioGridPlaceholder({
+function AudioGridContent({
     limit,
     title = "Latest Tracks",
     subtitle = "Freshly added audio for your projects"
@@ -267,5 +267,22 @@ export default function AudioGridPlaceholder({
                 </div>
             )}
         </section>
+    )
+}
+
+export default function AudioGridPlaceholder(props: {
+    limit?: number
+    title?: string
+    subtitle?: string
+}) {
+    return (
+        <Suspense fallback={
+            <div className="text-center py-20 text-gray-500 flex flex-col items-center">
+                <Loader2 className="animate-spin mb-4" size={30} />
+                <p className="text-sm">Loading grid...</p>
+            </div>
+        }>
+            <AudioGridContent {...props} />
+        </Suspense>
     )
 }

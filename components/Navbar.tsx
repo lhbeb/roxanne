@@ -2,11 +2,11 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { Suspense, useState, useEffect } from 'react'
 import { useRouter, useSearchParams, usePathname } from 'next/navigation'
 import { Menu, X, Music2, Layers, ShoppingBag, Search } from 'lucide-react'
 
-export default function Navbar() {
+function NavbarContent() {
     const [menuOpen, setMenuOpen] = useState(false)
     const [query, setQuery] = useState('')
     const router = useRouter()
@@ -16,7 +16,7 @@ export default function Navbar() {
     // Sync input with URL on mount
     useEffect(() => {
         setQuery(searchParams.get('q') ?? '')
-    }, [])
+    }, [searchParams])
 
     function handleSearch(value: string) {
         setQuery(value)
@@ -129,5 +129,13 @@ export default function Navbar() {
                 </div>
             )}
         </nav>
+    )
+}
+
+export default function Navbar() {
+    return (
+        <Suspense fallback={<div className="h-16 bg-[#191c26] border-b border-[#2f3441]" />}>
+            <NavbarContent />
+        </Suspense>
     )
 }

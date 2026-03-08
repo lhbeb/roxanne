@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import VisitorNotifier from '@/components/VisitorNotifier'
 
 export const metadata: Metadata = {
     title: 'Roxanne - Free Audio & Media Library',
@@ -25,6 +26,7 @@ export default function RootLayout({
     return (
         <html lang="en" className="dark">
             <body className="min-h-screen bg-[#191c26] text-white antialiased">
+                <VisitorNotifier />
                 <Navbar />
                 <main className="min-h-screen">
                     {children}

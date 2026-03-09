@@ -56,7 +56,9 @@ export default function SupportSection() {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-3">
                             <a
-                                href="#"
+                                href="https://buymeacoffee.com/roxanneamelia"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 id="support-buymeacoffee-btn"
                                 className="inline-flex items-center justify-center gap-2 bg-[#FFDD00] hover:bg-[#f0cf00] text-[#0D0C22] font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 text-sm shadow-lg shadow-[#FFDD00]/25 hover:scale-105"
                             >

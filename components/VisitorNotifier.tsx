@@ -14,7 +14,7 @@ export default function VisitorNotifier() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                path: pathname,
+                path: window.location.href,
                 referrer: document.referrer || null,
                 userAgent: navigator.userAgent,
             }),

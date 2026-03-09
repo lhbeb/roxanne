@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server'
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const isAdmin = request.cookies.has('admin_session')
 
     // If visiting /admin and not logged in, redirect to login

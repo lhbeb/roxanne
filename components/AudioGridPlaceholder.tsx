@@ -242,7 +242,7 @@ function AudioGridContent({
             {loading && (
                 <div className="text-center py-20 text-gray-500 flex flex-col items-center">
                     <Loader2 className="animate-spin mb-4" size={30} />
-                    <p className="text-sm">Loading tracks from database...</p>
+                    <p className="text-sm">Loading tracks...</p>
                 </div>
             )}
 

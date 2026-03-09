@@ -66,6 +66,19 @@ function AudioCard({ track, activeId, onPlay }: { track: Track; activeId: string
         onPlay(null) // deactivate
     }
 
+    function notifyPlay() {
+        fetch('/api/notify-play', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                trackTitle: track.title,
+                trackCategory: track.category,
+                pageUrl: window.location.href,
+                userAgent: navigator.userAgent,
+            }),
+        }).catch(() => { })
+    }
+
     async function handleDownload(e: React.MouseEvent) {
         e.preventDefault()
         e.stopPropagation()
@@ -123,7 +136,10 @@ function AudioCard({ track, activeId, onPlay }: { track: Track; activeId: string
                 {/* Play/Pause button */}
                 <button
                     id={`play-btn-${track.id}`}
-                    onClick={() => onPlay(isPlaying ? null : track.id)}
+                    onClick={() => {
+                        if (!isPlaying) notifyPlay()
+                        onPlay(isPlaying ? null : track.id)
+                    }}
                     className={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 group-hover:scale-110 ${isPlaying
                         ? 'bg-[#00ab6b] shadow-[#00ab6b]/40'
                         : 'bg-[#00ab6b] hover:bg-[#009e63] shadow-[#00ab6b]/30'

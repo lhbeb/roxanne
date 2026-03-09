@@ -23,6 +23,18 @@ export default function ProfileHero() {
         if (!email) return
         setSubmitted(true)
         setFollowing(true)
+
+        // Notify via Telegram
+        fetch('/api/notify-follow', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email,
+                pageUrl: window.location.href,
+                userAgent: navigator.userAgent,
+            }),
+        }).catch(() => { })
+
         setTimeout(() => {
             setShowModal(false)
             setSubmitted(false)

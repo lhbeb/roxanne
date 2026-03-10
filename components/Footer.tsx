@@ -25,6 +25,7 @@ export default function Footer() {
                                 {[
                                     { label: 'Browse Audio', href: '/' },
                                     { label: 'Collections', href: '/collections' },
+                                    { label: 'About', href: '/about' },
                                     { label: 'Admin Panel', href: '/admin' },
                                 ].map((link) => (
                                     <li key={link.href}>

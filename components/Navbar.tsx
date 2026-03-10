@@ -66,7 +66,7 @@ function NavbarContent() {
                             <span className="text-sm text-gray-300 group-hover/link:text-white transition-colors">Collections</span>
                         </Link>
                         <a
-                            href="https://buymeacoffee.com/roxanneamelia/extras"
+                            href="/shop"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-1.5 font-medium group/link"
@@ -76,7 +76,7 @@ function NavbarContent() {
                         </a>
                         <LinkedInLink className="flex items-center text-gray-400 hover:text-[#0a66c2] transition-colors" />
                         <a
-                            href="https://buymeacoffee.com/roxanneamelia"
+                            href="/bmc"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center hover:opacity-80 transition-opacity"
@@ -110,7 +110,7 @@ function NavbarContent() {
                             <span className="text-sm text-gray-300 group-hover/link:text-white transition-colors">Collections</span>
                         </Link>
                         <a
-                            href="https://buymeacoffee.com/roxanneamelia/extras"
+                            href="/shop"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 py-2 group/link"
@@ -120,7 +120,7 @@ function NavbarContent() {
                             <span className="text-sm text-gray-300 group-hover/link:text-white transition-colors">Shop</span>
                         </a>
                         <a
-                            href="https://buymeacoffee.com/roxanneamelia"
+                            href="/bmc"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => setMenuOpen(false)}

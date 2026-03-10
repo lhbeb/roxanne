@@ -56,7 +56,7 @@ export default function SupportSection() {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-3">
                             <a
-                                href="https://buymeacoffee.com/roxanneamelia"
+                                href="/bmc"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 id="support-buymeacoffee-btn"
@@ -66,7 +66,7 @@ export default function SupportSection() {
                                 Support on BuyMeACoffee
                             </a>
                             <a
-                                href="https://buymeacoffee.com/roxanneamelia/extras"
+                                href="/shop"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 id="support-shop-btn"

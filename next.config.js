@@ -33,6 +33,20 @@ const nextConfig = {
             },
         ]
     },
+    async redirects() {
+        return [
+            {
+                source: '/bmc',
+                destination: 'https://buymeacoffee.com/roxanneamelia',
+                permanent: false,
+            },
+            {
+                source: '/shop',
+                destination: 'https://buymeacoffee.com/roxanneamelia/extras',
+                permanent: false,
+            },
+        ]
+    },
 }
 
 module.exports = nextConfig

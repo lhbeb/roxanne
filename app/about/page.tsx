@@ -93,7 +93,7 @@ export default function AboutPage() {
                                 Every track uploaded here is personally engineered, mixed, and quality-checked. Whether you are building a film, a YouTube video, a game, or a podcast, I want you to have access to sounds that actually sound professional.
                             </p>
                             <p>
-                                The library is free. Always has been. Always will be. If you love what I do, the best way to support is through my <Link href="https://buymeacoffee.com/roxanneamelia" target="_blank" rel="noopener noreferrer" className="text-[#00ab6b] hover:underline">BuyMeACoffee</Link> page or by purchasing the Premium Sound Pack.
+                                The library is free. Always has been. Always will be. If you love what I do, the best way to support is through my <Link href="/bmc" target="_blank" rel="noopener noreferrer" className="text-[#00ab6b] hover:underline">BuyMeACoffee</Link> page or by purchasing the Premium Sound Pack.
                             </p>
                         </div>
                     </div>
@@ -142,7 +142,7 @@ export default function AboutPage() {
                             Browse Free Audio
                         </Link>
                         <Link
-                            href="https://buymeacoffee.com/roxanneamelia"
+                            href="/bmc"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 bg-[#FFDD00] hover:bg-[#f0cf00] text-[#0D0C22] font-semibold px-6 py-3 rounded-xl transition-all"

@@ -36,7 +36,7 @@ export default function ThankYouPage() {
                     {/* Email notice */}
                     <div className="inline-flex items-center gap-3 bg-[#232733] border border-[#2f3441] rounded-2xl px-6 py-4 text-sm text-gray-300">
                         <Mail size={18} className="text-[#00ab6b] flex-shrink-0" />
-                        <span>Check your inbox — your pack download will arrive by email within a few minutes.</span>
+                        <span>Check your inbox, your pack download will arrive by email within a few minutes.</span>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@ export default function ThankYouPage() {
                 <div className="bg-gradient-to-br from-[#1a2e22] to-[#1e2030] border border-[#00ab6b]/20 rounded-2xl p-7">
                     <h3 className="text-lg font-bold text-white mb-2">License</h3>
                     <p className="text-gray-400 text-sm leading-relaxed mb-5">
-                        All sounds included in this pack are <strong className="text-white">royalty-free</strong> — use them in your projects without paying ongoing royalties.
+                        All sounds included in this pack are <strong className="text-white">royalty-free</strong>, meaning you can use them in your projects without paying ongoing royalties.
                     </p>
                     <div className="grid grid-cols-2 gap-2">
                         {[

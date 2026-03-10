@@ -37,14 +37,28 @@ function AudioCard({ track, activeId, onPlay }: { track: Track; activeId: string
         setCurrentTime(formatTime(audio.currentTime))
     }
 
-    function handleDownload(e: React.MouseEvent) {
+    async function handleDownload(e: React.MouseEvent) {
         e.preventDefault()
-        const a = document.createElement('a')
-        a.href = track.file_url
-        a.download = `${track.title}.mp3`
-        document.body.appendChild(a)
-        a.click()
-        document.body.removeChild(a)
+        e.stopPropagation()
+
+        try {
+            const res = await fetch(track.file_url)
+            const blob = await res.blob()
+            const blobUrl = window.URL.createObjectURL(blob)
+
+            const a = document.createElement('a')
+            a.style.display = 'none'
+            a.href = blobUrl
+            a.download = `${track.title}.mp3`
+            document.body.appendChild(a)
+            a.click()
+
+            window.URL.revokeObjectURL(blobUrl)
+            document.body.removeChild(a)
+        } catch (error) {
+            console.error('Download failed:', error)
+            window.open(track.file_url, '_blank')
+        }
     }
 
     return (

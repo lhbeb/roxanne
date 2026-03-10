@@ -82,13 +82,27 @@ function AudioCard({ track, activeId, onPlay }: { track: Track; activeId: string
     async function handleDownload(e: React.MouseEvent) {
         e.preventDefault()
         e.stopPropagation()
-        // Create an invisible anchor tag to trigger the browser download
-        const a = document.createElement('a')
-        a.href = track.file_url
-        a.download = `${track.title}.mp3`
-        document.body.appendChild(a)
-        a.click()
-        document.body.removeChild(a)
+
+        try {
+            // Fetch the file to bypass cross-origin browser download limitations
+            const res = await fetch(track.file_url)
+            const blob = await res.blob()
+            const blobUrl = window.URL.createObjectURL(blob)
+
+            const a = document.createElement('a')
+            a.style.display = 'none'
+            a.href = blobUrl
+            a.download = `${track.title}.mp3`
+            document.body.appendChild(a)
+            a.click()
+
+            window.URL.revokeObjectURL(blobUrl)
+            document.body.removeChild(a)
+        } catch (error) {
+            console.error('Download failed:', error)
+            // Fallback
+            window.open(track.file_url, '_blank')
+        }
     }
 
     return (

@@ -15,7 +15,7 @@ export default function ThankYouPage() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#00ab6b]/8 blur-[120px] rounded-full pointer-events-none" />
                 <div className="absolute -top-10 right-10 w-64 h-64 bg-purple-500/5 blur-[100px] rounded-full pointer-events-none" />
 
-                <div className="relative max-w-3xl mx-auto px-6 py-20 text-center">
+                <div className="relative max-w-3xl mx-auto px-6 py-20 flex flex-col items-center text-center">
                     {/* Check icon */}
                     <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#00ab6b]/15 border-2 border-[#00ab6b]/40 mb-6 shadow-xl shadow-[#00ab6b]/10">
                         <CheckCircle2 size={38} className="text-[#00ab6b]" />
